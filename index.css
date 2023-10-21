@@ -1,0 +1,81 @@
+body {
+    background-color: #e7efef;
+    padding: 5% 15% 0 15%;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+.header-overview-title {
+    font-family: "Yellowtail", cursive;
+    font-size: 89px;
+    line-height: 110px;
+    color: #4b4b4b;
+    font-weight: 400;
+}
+
+.header-overview-navbar {
+    display: flex;
+    align-content: center;
+}
+
+.header-overview-navbar > a {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: #8c8b8c;
+    border-left: 2px dashed;
+    padding: 0 8px 0 10px;
+}
+
+.header-overview-navbar > a:first-child {
+    border-left: none;
+}
+
+.header-mailbox {
+    background-color: #fff;
+    padding: 0px;
+    align-items: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-mailbox-content {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-mailbox-content > p {
+    font-weight: bold;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+.header-mailbox > img {
+    width: 100%;
+}
+
+.email-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-content > input{
+    width: 70%;
+    border: 1px solid #8c8b8c;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+.email-content>button{
+    background: linear-gradient(to bottom, #cacaca 50%, #b3b3b3 50%);
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
