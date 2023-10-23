@@ -100,16 +100,22 @@ header {
 main {
     background-color: #fcfcfc;
     border: 1px solid #e2e2e2;
-    padding-left: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .main-highlight {
     width: 100%;
 }
 
+.main-highlight>.row{
+    display: flex;
+    align-items: center;
+}
+
 .main-highlight-news {
     display: flex;
     justify-content: space-around;
-    padding: 30px;
+    padding: 30px 30px 30px 0px;
     flex-direction: column;
 }
 .main-highlight-news-title {
@@ -141,25 +147,26 @@ main {
 
 .main-highlight-discount {
     position: relative;
-    padding-top: 30px;
-    padding-right: 30px;
     display: flex;
     align-content: space-around;
     flex-direction: column;
-    padding: 30px;
+    padding: 30px 0px 30px 30px;
+    height: 100%;
 }
 
 .main-highlight-discount-info {
     background-size: cover; /* Tuỳ chỉnh kích thước nếu cần */
     /* Các thuộc tính CSS khác tùy chỉnh */
     width: 100%;
-    height: 100%;
+    height: calc(100%-4px) ;
     background-size: cover;
-    background-image: url(./asset/bill-bg.svg);
+    background-image: url(./asset/bill-bg.png);
     background-position: center;
     display: flex;
     flex-direction: column;
     background-color: #fcfcfc;
+    border-left: #e5e5e5 1px solid;
+    border-right: #e5e5e5 1px solid;
 }
 
 .discount-title {
@@ -246,19 +253,8 @@ main {
     margin-left: 20px;
     margin-right: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     border: none;
-}
-
-.buy-button {
-    font-size: 25px;
-    letter-spacing: -1px;
-    line-height: 25px;
-    color: #5d7730;
-    font-weight: bold;
-    font-family: "Helvetica";
-    text-align: center;
-    filter: drop-shadow(0px 1px 0px rgba(255, 255, 255, 0.46));
 }
 
 .p-highlight {
@@ -267,6 +263,13 @@ main {
     display: flex;
     font-family: "Roboto", sans-serif;
     color: #8c8b8c;
+}
+
+.button-highlight-div {
+    padding: 0px 0px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .button-highlight {
@@ -278,8 +281,227 @@ main {
     text-align: center;
     background: linear-gradient(to bottom, #c6de85 50%, #aed268 50%);
     border-radius: 10px;
-    margin: 20px;
-    padding:20px 20px 20px 20px;
-    margin-top: 0px;
+    padding: 20px 20px 20px 20px;
     border: #94af5b 1px solid;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: #e5e5e5 1px dashed;
+    border-bottom: #e5e5e5 1px dashed;
+}
+
+.brand > img {
+    flex: 1; /* Cho phép các ô con chiếm toàn bộ không gian của phần tử cha */
+    min-width: 0; /* Đảm bảo các ô con có thể bị thu gọn khi không đủ không gian */
+    margin: 25px; /* Tạo khoảng cách giữa các ô con */
+}
+
+.deal.container {
+    padding: 0px;
+}
+
+.deal-info-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+}
+
+.deal-info-container {
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.deal-info-container > img {
+    width: calc(100%);
+    height: 15vh;
+    background-position: center;
+    background-color: rgb(255, 85, 85);
+}
+
+.deal-info-detail {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.deal-info-detail > div {
+    flex: 1;
+}
+
+.deal-info-detail .title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #8c8b8c;
+    display: flex;
+    justify-content: center;
+}
+
+.deal-info-detail .price {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(75, 75, 75);
+    display: flex;
+    justify-content: center;
+}
+
+.discount-block {
+    border-left: 1px dashed #e5e5e5;
+    border-right: 1px dashed #e5e5e5;
+}
+
+.deal-info {
+    margin-top: 10px;
+}
+
+.deal-info:nth-child(2) {
+    border-left: 1px dashed #e5e5e5;
+    border-right: 1px dashed #e5e5e5;
+}
+
+.deal-info-remain {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-bottom: 1px dashed #e5e5e5;
+    padding-bottom: 20px;
+}
+
+.deal-info-remain > .time {
+    font-weight: bold;
+    font-size: 10px;
+    color: #8c8b8c;
+    display: flex;
+    align-items: center;
+}
+
+.deal-info-remain > button {
+    font-size: 15px;
+    color: #5d7730;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #c6de85 50%, #aed268 50%);
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    border: #94af5b 1px solid;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-info {
+    display: flex;
+    padding: 0;
+}
+.footer-info .title {
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+}
+
+.footer-twitter {
+    border-left: 1px dashed #e5e5e5;
+    border-right: 1px dashed #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.footer-twitter > * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer-info.row > div {
+    padding-top: 10px;
+}
+
+.footer-info.row .title {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+
+.footer-info.row p {
+    font-size: 13px;
+    color: #8c8b8c;
+}
+
+.footer-twitter button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #8c8b8c;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+}
+
+.twitter-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.twitter-container .content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.twitter-container .content:first-child {
+    border-bottom: #e5e5e5 1px dashed;
+    padding-top: 0;
+}
+
+.other-page-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.other-page-container > a {
+    border-bottom: #e5e5e5 1px dashed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.other-page-container > a:first-child {
+    padding-top: 0;
+}
+
+.footer-info a {
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+    color: #5d7730;
+    text-decoration: none;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer p {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #8c8b8c;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
 }
