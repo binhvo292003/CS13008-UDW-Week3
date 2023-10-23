@@ -1,3 +1,7 @@
+:root {
+    --font-size: 1rem;
+}
+
 body {
     background-color: #e7efef;
     font-family: "Roboto", sans-serif;
@@ -14,14 +18,14 @@ header {
     padding: 0px;
 }
 
-.header>div{
+.header > div {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .header-overview-title {
     font-family: "Yellowtail", cursive;
-    font-size: 89px;
+    font-size: 6rem;
     line-height: 110px;
     color: #4b4b4b;
     font-weight: 400;
@@ -34,7 +38,7 @@ header {
 
 .header-overview-navbar > a {
     font-weight: bold;
-    font-size: 14px;
+    font-size: var(--font-size);
     text-decoration: none;
     color: #8c8b8c;
     border-left: 2px dashed;
@@ -47,31 +51,35 @@ header {
 
 .header-mailbox {
     background-color: #fff;
-    padding: 0px;
+    padding: 0;
     align-items: center;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
+/* .header-mailbox-content {
+    margin-left: 10%;
+    margin-right: 10%;
+} */
 .header-mailbox-stemp {
     position: absolute;
-    width: 130px !important;
+    width: 25% !important;
     display: flex;
-    top: -60px;
-    left: 420px;
+    top: -40%;
+    left: 85%;
 }
 
 .header-mailbox-content {
     font-weight: bold;
-    padding:30px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
 }
 
 .header-mailbox-content > p {
     font-weight: bold;
-    font-size: 17px;
+    font-size: var(--font-size);
     white-space: nowrap;
 }
 
@@ -110,7 +118,7 @@ main {
     width: 100%;
 }
 
-.main-highlight>.row{
+.main-highlight > .row {
     display: flex;
     align-items: center;
 }
@@ -144,7 +152,7 @@ main {
 }
 
 .main-highlight-news p {
-    font-size: 13px;
+    font-size: var(--font-size);
     color: #8c8b8c;
 }
 
@@ -161,7 +169,7 @@ main {
     background-size: cover; /* Tuỳ chỉnh kích thước nếu cần */
     /* Các thuộc tính CSS khác tùy chỉnh */
     width: 100%;
-    height: calc(100%-4px) ;
+    height: calc(100%-4px);
     background-size: cover;
     background-image: url(./asset/bill-bg.png);
     background-position: center;
@@ -173,15 +181,13 @@ main {
     z-index: 2;
 }
 
-
-
 .discount-title {
     display: flex;
     color: #8c8b8c;
     font-weight: bold;
     justify-content: center;
     padding: 10px;
-    font-size: 17px;
+    font-size: var(--font-size);
 }
 
 .discount-title {
@@ -193,7 +199,7 @@ main {
 .discount-time-remain {
     display: flex;
     justify-content: center;
-    font-size: 17px;
+    font-size: var(--font-size);
     font-weight: bold;
     border-top: #e5e5e5 1px solid;
     border-bottom: #e5e5e5 1px solid;
@@ -235,7 +241,7 @@ main {
     font-weight: bold;
     justify-content: center;
     display: flex;
-    font-size: 17px;
+    font-size: var(--font-size);
     padding: 10px;
     padding-bottom: 5px;
 }
@@ -279,7 +285,7 @@ main {
 }
 
 .button-highlight {
-    font-size: 20px;
+    font-size: var(--font-size);
     line-height: 25px;
     color: #5d7730;
     font-weight: bold;
@@ -352,7 +358,7 @@ main {
 
 .deal-info-detail .title {
     font-weight: bold;
-    font-size: 14px;
+    font-size: var(--font-size);
     color: #8c8b8c;
     display: flex;
     justify-content: center;
@@ -360,7 +366,7 @@ main {
 
 .deal-info-detail .price {
     font-weight: bold;
-    font-size: 14px;
+    font-size: var(--font-size);
     color: rgb(75, 75, 75);
     display: flex;
     justify-content: center;
@@ -397,7 +403,7 @@ main {
 }
 
 .deal-info-remain > button {
-    font-size: 15px;
+    font-size: var(--font-size);
     color: #5d7730;
     font-weight: bold;
     font-family: "Roboto", sans-serif;
@@ -438,11 +444,11 @@ main {
 .footer-info.row .title {
     padding-top: 20px;
     padding-bottom: 10px;
-    font-size: 17px;
+    font-size: var(--font-size);
 }
 
 .footer-info.row p {
-    font-size: 13px;
+    font-size: var(--font-size);
     color: #8c8b8c;
 }
 
@@ -451,7 +457,7 @@ main {
     border-radius: 5px;
     font-weight: bold;
     color: #8c8b8c;
-    font-size: 12px;
+    font-size: var(--font-size);
     padding: 5px 10px 5px 10px;
 }
 
@@ -487,7 +493,7 @@ main {
 }
 
 .footer-info a {
-    font-size: 13px;
+    font-size: var(--font-size);
     font-family: "Roboto", sans-serif;
     color: #5d7730;
     text-decoration: none;
@@ -499,6 +505,8 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: var(--font-size);
+    text-align: center;
 }
 
 footer p {
@@ -510,4 +518,53 @@ footer p {
 footer a {
     color: black;
     text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    img.header-mailbox-stemp {
+        visibility: hidden;
+        display: none;
+    }
+    .main-highlight > .row > div {
+        padding: 2rem;
+    }
+    .main-highlight-discount-info {
+        width: 250px;
+    }
+    .main-highlight-discount {
+        align-items: center;
+    }
+    .button-highlight-div {
+        padding: 0px;
+    }
+
+    .header-mailbox-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .email-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .email-content > * {
+        margin-bottom: 1rem;
+    }
+    .button-highlight-div {
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-mailbox-content p {
+        white-space: normal; /* Allow text to wrap on larger screens */
+        max-width: 400px; /* Set a specific max-width for larger screens */
+
+        overflow: hidden; /* Hide the content that overflows the viewport */
+        text-overflow: ellipsis; /* Display an ellipsis (...) when content overflows */
+        display: flex;
+        text-align: center;
+    }
+    .brand {
+        flex-direction: column;
+    }
 }
